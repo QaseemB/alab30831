@@ -47,14 +47,58 @@
 //     }
 
 
-let n = 2
-Primeloop: for (let i = n; i <100; i++){
-    if(n === 1) continue Primeloop;
+// let n = 2
+// Primeloop: for (let i = n; i <100; i++){
+//     if(n === 1) continue Primeloop;
 
-    for( let j = n; j>1; j--){
-        if( i % j === 0) continue Primeloop;
-      }
-    console.log(i)
-    break;
-}
+//     for( let j = n; j>1; j--){
+//         if( i % j === 0) continue Primeloop;
+//       }
+//     console.log(i)
+//     break;
+// }
+
+
+// Part 3: Feeling Loopy
+// As a final task, solve the following practical problem regarding string processing.
+// Context: A CSV file, or “Comma-Separated Values” file is traditionally used to store tabular data. You may be familiar with CSVs through past use of programs such as Microsoft Excel or Google Sheets. While each of these programs save their data in different formats to preserve style (e.g., font color or cell backgrounds), at their core, they are storing CSV data.
+// CSV data looks like this:
+// ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26
+// Not very nice to look at. The “\n” is an escaped Line Feed, which indicates that the following data should begin on a new line, as follows:
+// ID,Name,Occupation,Age42,Bruce,Knight,4157,Bob,Fry Cook,1963,Blaine,Quiz Master,5898,Bill,Doctor’s Assistant,26
+// As you may have guessed, these values being “comma-separated” means that each comma is also a delimiter. This is why this type of data is traditionally viewed in tables. Here is how the data looks once fully parsed:
+
+
+// Your task is to write a script that accomplishes the following:
+// Loop through the characters of a given CSV string.
+// Store each “cell” of data in a variable.
+// When you encounter a comma, move to the next cell.
+// When you encounter the “\r\n” sequence, move to the next “row.”
+// Log each row of data.
+// You do not need to format the data, the following works well.
+// console.log(cell1, cell2, cell3, cell4);
+// You can make the following assumptions:
+// There will only be 4 cells per row.
+// There will be no escaped characters other than “\n”.
+
+
+
+
+
+// for( let x = 0; x < .length; x++){
+//     console.log(ID[x])
+// }
+// console.log(cell1,cell2,cell3,cell4)
+
+let CSV = ('ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26');
+let CSVwithout_commas = CSV
+                            .replaceAll(',', ' ')
+
+ let c = CSVwithout_commas;
+
+  for(row of c){
+    row.split('\n')
+    let cell1 = row[0]
+    console.log(row)
+  }
 
