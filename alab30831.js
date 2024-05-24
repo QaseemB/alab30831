@@ -93,11 +93,11 @@
 let CSV = ('ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26');
 let CSVwithout_commas = CSV
                             .replaceAll(',', ' ')
+ let c = CSVwithout_commas.split('\n'); // Split the CSV into rows
 
- let c = CSVwithout_commas;
 
   for(row of c){
-    row.split('\n')
+    // row.split('\n')
     let cell1 = row[0]
     console.log(row)
   }
