@@ -82,27 +82,16 @@
 // There will be no escaped characters other than “\n”.
 
 
+let CSV = 'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26';
+let CSVwithout_commas = CSV.replaceAll(',', ' '); 
 
+let rows = CSVwithout_commas.split('\n');  
 
-
-// for( let x = 0; x < .length; x++){
-//     console.log(ID[x])
-// }
-// console.log(cell1,cell2,cell3,cell4)
-
-let CSV = ('ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctors Assistant,26');
-let CSVwithout_commas = CSV
-                            .replaceAll(',', ' ')
- let c = CSVwithout_commas.split('\n'); // Split the CSV into rows
-  for(row of c){
-    // let cells = row.split(' ')
-    // if (cells.length>=4){
-    // let cell1 = row[0]
-    // let cell2 = row[1]
-    // let cell3 = row[2]
-    // let cell4 = row[3]
-    // console.log(cell1, cell2, cell3, cell4)
-    // }
-    console.log(row)
-  }
-
+for (let c of rows) {
+    let cells = c.split(' ');
+        let cell1 = cells[0];
+        let cell2 = cells[1];
+        let cell3 = cells[2];
+        let cell4 = cells[3];
+        console.log(cell1,cell2,cell3,cell4); 
+}
